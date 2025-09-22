@@ -1,0 +1,923 @@
+{
+  "results": [
+    {
+      "id": 68,
+      "title": "Oppenheimer",
+      "description": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+      "genre": "Drama, History",
+      "rating": 8.05,
+      "duration": "Duration not fetched",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "trailerUrl": "https://www.youtube.com/watch?v=hlZO437mwXQ",
+      "showtimes": [
+        "2025-09-14T04:30:00.000Z",
+        "2025-09-14T08:00:00.000Z",
+        "2025-09-14T11:30:00.000Z",
+        "2025-09-14T16:00:00.000Z"
+      ],
+      "cast": [
+        {
+          "name": "Cillian Murphy",
+          "role": "J. Robert Oppenheimer",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/llkbyWKwpfowZ6C8peBjIV9jj99.jpg"
+        },
+        {
+          "name": "Emily Blunt",
+          "role": "Kitty Oppenheimer",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/zpJ7pupuNF3W0zTxm6yioGIoxbd.jpg"
+        },
+        {
+          "name": "Matt Damon",
+          "role": "Leslie Groves",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/4KAxONjmVq7qcItdXo38SYtnpul.jpg"
+        },
+        {
+          "name": "Robert Downey Jr.",
+          "role": "Lewis Strauss",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+        },
+        {
+          "name": "Florence Pugh",
+          "role": "Jean Tatlock",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/6Sjz9teWjrMY9lF2o9FCo4XmoRh.jpg"
+        },
+        {
+          "name": "Josh Hartnett",
+          "role": "Ernest Lawrence",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/8nTEioiir92fGHcASarPxkjF6kG.jpg"
+        },
+        {
+          "name": "Casey Affleck",
+          "role": "Boris Pash",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/304ilSygaCRWykoBWAL67TOw8g9.jpg"
+        },
+        {
+          "name": "Rami Malek",
+          "role": "David Hill",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/ewr46CGOdsx5NzAJdIzEBz2yIQh.jpg"
+        },
+        {
+          "name": "Kenneth Branagh",
+          "role": "Niels Bohr",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+        },
+        {
+          "name": "Benny Safdie",
+          "role": "Edward Teller",
+          "photoUrl": "https://image.tmdb.org/t/p/w185/9tp4PLNyYPNfCJOWBXPPalWIpnq.jpg"
+        }
+      ]
+    },
+{
+  "id": 965,
+  "title": "Barbie",
+  "description": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+  "genre": "Comedy, Adventure",
+  "rating": 6.958,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=EDOdCaj3R3s",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Margot Robbie",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
+    },
+    {
+      "name": "Ryan Gosling",
+      "role": "Ken",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/asoKC7CLCqpZKZDL6iovNurQUdf.jpg"
+    },
+    {
+      "name": "America Ferrera",
+      "role": "Gloria",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/7F84Lh2lKpvkM3EiOvqqvlOmw93.jpg"
+    },
+    {
+      "name": "Ariana Greenblatt",
+      "role": "Sasha",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/bg9ysIhsdygPpVx2rnKDtzylfRv.jpg"
+    },
+    {
+      "name": "Issa Rae",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/uFjimuDgBv8kckApr19t8DykxPH.jpg"
+    },
+    {
+      "name": "Kate McKinnon",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/7o26OzpEPAUma65jGQZop9d52gy.jpg"
+    },
+    {
+      "name": "Alexandra Shipp",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/98AfO5NSqWnlhIxjSg08gGYdxUG.jpg"
+    },
+    {
+      "name": "Emma Mackey",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tLkYW0FEKla2pfsk5pA4HgDLKCz.jpg"
+    },
+    {
+      "name": "Hari Nef",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/nNeLyxpeagY1fvbkciwp4zaat79.jpg"
+    },
+    {
+      "name": "Sharon Rooney",
+      "role": "Barbie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/aMsYxadSBZ2dIlULmpHZCJyL9VF.jpg"
+    }
+  ]
+},
+{
+  "id": 970,
+  "title": "Deadpool & Wolverine",
+  "description": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+  "genre": "Action, Comedy, Science Fiction",
+  "rating": 7.6,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=dyq7hMlF9iY",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Ryan Reynolds",
+      "role": "Wade Wilson / Deadpool / Nicepool",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/trzgptffGvAlAT6MEu01fz47cLW.jpg"
+    },
+    {
+      "name": "Hugh Jackman",
+      "role": "Logan / Wolverine",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg"
+    },
+    {
+      "name": "Emma Corrin",
+      "role": "Cassandra Nova",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/wqGOVOsHzZaHeHymIS40elGCnY0.jpg"
+    },
+    {
+      "name": "Matthew Macfadyen",
+      "role": "Mr. Paradox",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/wjzFvujqF5KuHoIGLOjk6FCiSYJ.jpg"
+    },
+    {
+      "name": "Dafne Keen",
+      "role": "Laura / X-23",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/g325OIjIHrFr0te8ewPfhKQ2SKj.jpg"
+    },
+    {
+      "name": "Jon Favreau",
+      "role": "Happy Hogan",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tnx7iMVydPQXGOoLsxXl84PXtbA.jpg"
+    },
+    {
+      "name": "Morena Baccarin",
+      "role": "Vanessa",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/kBSKKaOtsqIzZPhtEeHfCBmhWl9.jpg"
+    },
+    {
+      "name": "Rob Delaney",
+      "role": "Peter",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/xirfT1znRkkughLiPemKu3NhkKQ.jpg"
+    },
+    {
+      "name": "Leslie Uggams",
+      "role": "Blind Al",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/peLaqLcs3y2WY4TbrLOXQGt9I8S.jpg"
+    },
+    {
+      "name": "Jennifer Garner",
+      "role": "Elektra",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/ftymEXqdTnXfaI6dGd9qrJoFOSE.jpg"
+    }
+  ]
+},
+{
+  "id": 97,
+  "title": "Jawan",
+  "description": "An emotional journey of a prison warden, driven by a personal vendetta while keeping up to a promise made years ago, recruits inmates to commit outrageous crimes that shed light on corruption and injustice, in an attempt to get even with his past, and that leads him to an unexpected reunion.",
+  "genre": "Action, Crime, Thriller",
+  "rating": 7.1,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/jFt1gS4BGHlK8xt76Y81Alp4dbt.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=MWOlnZSnXJo",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Shah Rukh Khan",
+      "role": "Vikram Rathore / Azad",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/d8jQehnCiGuLhZbs1DyB2uDu5BA.jpg"
+    },
+    {
+      "name": "Nayanthara",
+      "role": "Narmada",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/5KubBeb2DkNXoU4lzzBdWzqzzlM.jpg"
+    },
+    {
+      "name": "Vijay Sethupathi",
+      "role": "Kalee Gaikwad",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/a3HWdfCAbplrvoMNEJCjnkbqqOo.jpg"
+    },
+    {
+      "name": "Deepika Padukone",
+      "role": "Aishwarya Rathore",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/sXgEh0z6NzyvmEeBeLPK1ON7NBY.jpg"
+    },
+    {
+      "name": "Sanjay Dutt",
+      "role": "Madhavan Naik",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/oq4pnvWhl1HxKpp0KVlSfAr3Tiu.jpg"
+    },
+    {
+      "name": "Priyamani",
+      "role": "Laxmi",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/zB365nF9wec5KBczviUTAX9MwHj.jpg"
+    },
+    {
+      "name": "Sanya Malhotra",
+      "role": "Eeram",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/sQ0VIqGLecfpwYayO05Z7NC32yN.jpg"
+    },
+    {
+      "name": "Girija Oak",
+      "role": "Ishkra",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/f10HPTExCVQ8mZXShctpWPsxxaw.jpg"
+    },
+    {
+      "name": "Lehar Khan",
+      "role": "Kalki",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/qkGtsYbXbdppzNLTsqhBpKiDeme.jpg"
+    },
+    {
+      "name": "Sanjeeta Bhattacharya",
+      "role": "Helena",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/5R43ctB6aRYvXEpS5DkiAxkfnkW.jpg"
+    }
+  ]
+},
+{
+  "id": 986,
+  "title": "Guardians of the Galaxy Vol. 3",
+  "description": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+  "genre": "Science Fiction, Adventure, Action, Comedy",
+  "rating": 7.931,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=3RLT34SwtQc",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Chris Pratt",
+      "role": "Peter Quill / Star-Lord",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Zoe Saldaña",
+      "role": "Gamora",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "role": "Drax",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    },
+    {
+      "name": "Karen Gillan",
+      "role": "Nebula",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/rWx8u4F4aYIqmjJDeMK78ysPsu0.jpg"
+    },
+    {
+      "name": "Pom Klementieff",
+      "role": "Mantis",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/hfUKAI2kXTMMWjno0i4sLPJud5N.jpg"
+    },
+    {
+      "name": "Vin Diesel",
+      "role": "Groot (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    },
+    {
+      "name": "Bradley Cooper",
+      "role": "Rocket (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/sQq0nft6YZmJ7EMQwPcbaxym3AL.jpg"
+    },
+    {
+      "name": "Sean Gunn",
+      "role": "Kraglin / Young Rocket (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tiolBlPytndQVGHO9vLnBKWWenq.jpg"
+    },
+    {
+      "name": "Chukwudi Iwuji",
+      "role": "The High Evolutionary",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/7j1qD4XeBFvlmNUi1fYrraKhjdN.jpg"
+    },
+    {
+      "name": "Will Poulter",
+      "role": "Adam Warlock",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/9blYMaj79VGC6BHTLmJp3V5S8r3.jpg"
+    }
+  ]
+},
+{
+  "id": 991,
+  "title": "Spider-Man: Across the Spider-Verse",
+  "description": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+  "genre": "Animation, Action, Adventure, Science Fiction",
+  "rating": 8.341,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=LYtS6yKsOEQ",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Shameik Moore",
+      "role": "Miles Morales (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/mGF5ihrMt1MCxDvEOK2MO6YcNLt.jpg"
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "role": "Gwen Stacy (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/oXZhTeg1TlHI8LC8Hv5aQjBjZp1.jpg"
+    },
+    {
+      "name": "Brian Tyree Henry",
+      "role": "Jeff Morales (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/1UgDnFt3OteCJQPiUelWzIR5bvT.jpg"
+    },
+    {
+      "name": "Luna Lauren Velez",
+      "role": "Rio Morales (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/98BvmTJCZHx0jPv0oNcv04Jkmfb.jpg"
+    },
+    {
+      "name": "Jake Johnson",
+      "role": "Peter B. Parker (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/3UNfW2qZgRkW81neNVfQvaRC92K.jpg"
+    },
+    {
+      "name": "Oscar Isaac",
+      "role": "Miguel O'Hara (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg"
+    },
+    {
+      "name": "Jason Schwartzman",
+      "role": "Spot (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/gCjMdmW1DiPAClHVl4zHEIffIsE.jpg"
+    },
+    {
+      "name": "Issa Rae",
+      "role": "Jessica Drew (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/uFjimuDgBv8kckApr19t8DykxPH.jpg"
+    },
+    {
+      "name": "Daniel Kaluuya",
+      "role": "Hobie Brown (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/jj2kZqJobjom36wlhlYhc38nTwN.jpg"
+    },
+    {
+      "name": "Karan Soni",
+      "role": "Pavitr Prabhakar (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/t3eNrzRKy3wTVCUiEp002UXbjxX.jpg"
+    }
+  ]
+},
+{
+  "id": 99,
+  "title": "Thor: Love and Thunder",
+  "description": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+  "genre": "Fantasy, Action, Comedy",
+  "rating": 6.397,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=hRUMPVyoyT4",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Chris Hemsworth",
+      "role": "Thor",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg"
+    },
+    {
+      "name": "Natalie Portman",
+      "role": "Jane Foster / The Mighty Thor",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/edPU5HxncLWa1YkgRPNkSd68ONG.jpg"
+    },
+    {
+      "name": "Christian Bale",
+      "role": "Gorr",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+    },
+    {
+      "name": "Tessa Thompson",
+      "role": "King Valkyrie",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/fycqdiiM6dsNSbnONBVVQ57ILV1.jpg"
+    },
+    {
+      "name": "Taika Waititi",
+      "role": "Korg / Old Kronan God (voice)",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/aH6MgwFhomAPNBRPyO2fhpU5kbk.jpg"
+    },
+    {
+      "name": "Russell Crowe",
+      "role": "Zeus",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/rsxGCRtPu42uKDJZlz7qknvz8h6.jpg"
+    },
+    {
+      "name": "Jaimie Alexander",
+      "role": "Sif",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/2lo29bgiQS6hWcLI81XkRAorKoy.jpg"
+    },
+    {
+      "name": "Idris Elba",
+      "role": "Heimdall",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+    },
+    {
+      "name": "Chris Pratt",
+      "role": "Peter Quill / Star-Lord",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+    },
+    {
+      "name": "Dave Bautista",
+      "role": "Drax",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg"
+    }
+  ]
+},
+{
+  "id": 1001,
+  "title": "Animal",
+  "description": "His name: infamous. His reputation: ruthless. But when James \"Animal\" Allen is locked up in a maximum security prison, he meets a revolutionary who changes his life. Now a reformed man, James is released only to find that his own son has assumed a life of crime and violence. Can a father haunted by his past redeem his family from the very streets he created, or will he be forced to make the ultimate sacrifice?",
+  "genre": "Action, Drama",
+  "rating": 5.6,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/f0r2kdF3TitkTxAwb0kKdsTfIvi.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=omUAu6kt4ls",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Ving Rhames", "role": "Animal", "photoUrl": "https://image.tmdb.org/t/p/w185/4gpLVNKPZlVucc4fT2fSZ7DksTK.jpg" },
+    { "name": "Terrence Howard", "role": "Darius Allen", "photoUrl": "https://image.tmdb.org/t/p/w185/wXWt2NSY23v7DHe2yZQ1C8TikBp.jpg" },
+    { "name": "Jim Brown", "role": "Berwell", "photoUrl": "https://image.tmdb.org/t/p/w185/wfp06VC5yr9mdzdZ5JcbzqD5YEG.jpg" },
+    { "name": "Chazz Palminteri", "role": "Kassada", "photoUrl": "https://image.tmdb.org/t/p/w185/mCbjKVyE5B2tleshbJw44tw3ktZ.jpg" },
+    { "name": "Beverly Todd", "role": "Latreese", "photoUrl": "https://image.tmdb.org/t/p/w185/yrs5xVDJmCfeurMQmXn0MuqHIod.jpg" },
+    { "name": "Taraji P. Henson", "role": "Ramona", "photoUrl": "https://image.tmdb.org/t/p/w185/jUU2X9mDwJaAniEmJOfvImBS9qb.jpg" },
+    { "name": "Junior Álvarez", "role": "Kevin Belzer", "photoUrl": "https://image.tmdb.org/t/p/w185/wuXe7REvF7uPFHQWy7yBC7IlMFT.jpg" },
+    { "name": "Rafa Alvarez", "role": "Paul Wilson", "photoUrl": "" },
+    { "name": "Black Child", "role": "Spyda", "photoUrl": "" },
+    { "name": "Carlos Esteban Fonseca", "role": "Big Dre", "photoUrl": "https://image.tmdb.org/t/p/w185/vyaUolRJDxKUTbx2imsjx2qyBej.jpg" }
+  ]
+},
+{
+  "id": 1002,
+  "title": "The Marvels",
+  "description": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+  "genre": "Science Fiction, Adventure, Action",
+  "rating": 6,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=ZaTUatY-UoU",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Brie Larson", "role": "Carol Danvers / Captain Marvel", "photoUrl": "https://image.tmdb.org/t/p/w185/xSGvMwNNJcEQvVcjiIUTyxyMfkZ.jpg" },
+    { "name": "Teyonah Parris", "role": "Monica Rambeau", "photoUrl": "https://image.tmdb.org/t/p/w185/iGvBTOi0y2fbBVwgnBRXgY0IXDY.jpg" },
+    { "name": "Iman Vellani", "role": "Kamala Khan / Ms. Marvel", "photoUrl": "https://image.tmdb.org/t/p/w185/jD2TNIyJQmdqijGTzhvdiYabYix.jpg" },
+    { "name": "Samuel L. Jackson", "role": "Nick Fury", "photoUrl": "https://image.tmdb.org/t/p/w185/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg" },
+    { "name": "Zawe Ashton", "role": "Dar-Benn", "photoUrl": "https://image.tmdb.org/t/p/w185/zbxVfvhPhCfgpgmWTdtHWurNqYu.jpg" },
+    { "name": "Gary Lewis", "role": "Emperor Dro'ge", "photoUrl": "https://image.tmdb.org/t/p/w185/cOaibfAluUeWPtcSOjedfGXn9ym.jpg" },
+    { "name": "Park Seo-jun", "role": "Prince Yan", "photoUrl": "https://image.tmdb.org/t/p/w185/k1ALgZkOApYt7PIUBkUitmknXQC.jpg" },
+    { "name": "Zenobia Shroff", "role": "Muneeba Khan", "photoUrl": "https://image.tmdb.org/t/p/w185/fwU2vIUq9W9eXRKxx9r3papdOkS.jpg" },
+    { "name": "Mohan Kapur", "role": "Yusuf Khan", "photoUrl": "https://image.tmdb.org/t/p/w185/lL0J5DBOwN1pwLCvuo7uQ0ApjF.jpg" },
+    { "name": "Saagar Shaikh", "role": "Aamir Khan", "photoUrl": "https://image.tmdb.org/t/p/w185/hQsNsaJ8ekAHjJfkxfQPpH0qX5Q.jpg" }
+  ]
+},
+{
+  "id": 1003,
+  "title": "Black Panther: Wakanda Forever",
+  "description": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+  "genre": "Action, Adventure, Science Fiction",
+  "rating": 7.038,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=GR03EwYlVQM",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Letitia Wright",
+      "role": "Shuri",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/f7PevpEeBqwzACPhoZ8K3ktrKvE.jpg"
+    },
+    {
+      "name": "Tenoch Huerta Mejía",
+      "role": "Namor",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/5qoAmQpcPCjf4Pd6aTZOeINGYzk.jpg"
+    },
+    {
+      "name": "Lupita Nyong'o",
+      "role": "Nakia",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+    },
+    {
+      "name": "Danai Gurira",
+      "role": "Okoye",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/gjTMEc5bl5iA1aO9KweIQ1vcuWp.jpg"
+    },
+    {
+      "name": "Winston Duke",
+      "role": "M'Baku",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/pqwok07EgGGTCa80kmGQmb8ut8M.jpg"
+    },
+    {
+      "name": "Angela Bassett",
+      "role": "Ramonda",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tKnuviliyeKNGlo26IU5gIrJAtd.jpg"
+    },
+    {
+      "name": "Martin Freeman",
+      "role": "Everett Ross",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/amUYpgHEn2evMo3QfRIoy0ATQza.jpg"
+    },
+    {
+      "name": "Julia Louis-Dreyfus",
+      "role": "Valentina Allegra de Fontaine",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/sXpjQoFoYqNehfWhlkScF8lo9vc.jpg"
+    },
+    {
+      "name": "Dominique Thorne",
+      "role": "Riri",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tuLlp79SfYc4mLzzjdC2ekLI7qd.jpg"
+    },
+    {
+      "name": "Florence Kasumba",
+      "role": "Ayo",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/v7armAbV6haib0fTl6ZktTUMRmg.jpg"
+    }
+  ]
+},
+{
+  "id": 1003,
+  "title": "Black Panther: Wakanda Forever",
+  "description": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+  "genre": "Action, Adventure, Science Fiction",
+  "rating": 7.038,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=GR03EwYlVQM",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    {
+      "name": "Letitia Wright",
+      "role": "Shuri",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/f7PevpEeBqwzACPhoZ8K3ktrKvE.jpg"
+    },
+    {
+      "name": "Tenoch Huerta Mejía",
+      "role": "Namor",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/5qoAmQpcPCjf4Pd6aTZOeINGYzk.jpg"
+    },
+    {
+      "name": "Lupita Nyong'o",
+      "role": "Nakia",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+    },
+    {
+      "name": "Danai Gurira",
+      "role": "Okoye",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/gjTMEc5bl5iA1aO9KweIQ1vcuWp.jpg"
+    },
+    {
+      "name": "Winston Duke",
+      "role": "M'Baku",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/pqwok07EgGGTCa80kmGQmb8ut8M.jpg"
+    },
+    {
+      "name": "Angela Bassett",
+      "role": "Ramonda",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tKnuviliyeKNGlo26IU5gIrJAtd.jpg"
+    },
+    {
+      "name": "Martin Freeman",
+      "role": "Everett Ross",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/amUYpgHEn2evMo3QfRIoy0ATQza.jpg"
+    },
+    {
+      "name": "Julia Louis-Dreyfus",
+      "role": "Valentina Allegra de Fontaine",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/sXpjQoFoYqNehfWhlkScF8lo9vc.jpg"
+    },
+    {
+      "name": "Dominique Thorne",
+      "role": "Riri",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/tuLlp79SfYc4mLzzjdC2ekLI7qd.jpg"
+    },
+    {
+      "name": "Florence Kasumba",
+      "role": "Ayo",
+      "photoUrl": "https://image.tmdb.org/t/p/w185/v7armAbV6haib0fTl6ZktTUMRmg.jpg"
+    }
+  ]
+},
+{
+  "id": 1005,
+  "title": "Mission: Impossible - Dead Reckoning Part One",
+  "description": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.",
+  "genre": "Action, Adventure, Thriller",
+  "rating": 7.521,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=b49YgF0VN6A",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Tom Cruise", "role": "Ethan Hunt", "photoUrl": "https://image.tmdb.org/t/p/w185/3mShHjSQR7NXOVbdTu5rT2Qd0MN.jpg" },
+    { "name": "Hayley Atwell", "role": "Grace", "photoUrl": "https://image.tmdb.org/t/p/w185/gmfGlGOt62TNzUyH3e7jUu6HNk5.jpg" },
+    { "name": "Ving Rhames", "role": "Luther Stickell", "photoUrl": "https://image.tmdb.org/t/p/w185/4gpLVNKPZlVucc4fT2fSZ7DksTK.jpg" },
+    { "name": "Simon Pegg", "role": "Benji Dunn", "photoUrl": "https://image.tmdb.org/t/p/w185/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg" },
+    { "name": "Rebecca Ferguson", "role": "Ilsa Faust", "photoUrl": "https://image.tmdb.org/t/p/w185/lJloTOheuQSirSLXNA3JHsrMNfH.jpg" },
+    { "name": "Vanessa Kirby", "role": "The White Widow", "photoUrl": "https://image.tmdb.org/t/p/w185/a8a9U00KL2JJkkekzhNnueIGKKF.jpg" },
+    { "name": "Esai Morales", "role": "Gabriel", "photoUrl": "https://image.tmdb.org/t/p/w185/cNYciYzUzxraGlw0BPql1QePi5H.jpg" },
+    { "name": "Pom Klementieff", "role": "Paris", "photoUrl": "https://image.tmdb.org/t/p/w185/hfUKAI2kXTMMWjno0i4sLPJud5N.jpg" },
+    { "name": "Henry Czerny", "role": "Kittridge", "photoUrl": "https://image.tmdb.org/t/p/w185/zOWZzRmliKf9032IOOq0a3jXhVv.jpg" },
+    { "name": "Shea Whigham", "role": "Briggs", "photoUrl": "https://image.tmdb.org/t/p/w185/qsKe5oze7fdS96BrXDTc5bcxyEl.jpg" }
+  ]
+},
+{
+  "id": 1005,
+  "title": "Mission: Impossible - Dead Reckoning Part One",
+  "description": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.",
+  "genre": "Action, Adventure, Thriller",
+  "rating": 7.521,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=b49YgF0VN6A",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Tom Cruise", "role": "Ethan Hunt", "photoUrl": "https://image.tmdb.org/t/p/w185/3mShHjSQR7NXOVbdTu5rT2Qd0MN.jpg" },
+    { "name": "Hayley Atwell", "role": "Grace", "photoUrl": "https://image.tmdb.org/t/p/w185/gmfGlGOt62TNzUyH3e7jUu6HNk5.jpg" },
+    { "name": "Ving Rhames", "role": "Luther Stickell", "photoUrl": "https://image.tmdb.org/t/p/w185/4gpLVNKPZlVucc4fT2fSZ7DksTK.jpg" },
+    { "name": "Simon Pegg", "role": "Benji Dunn", "photoUrl": "https://image.tmdb.org/t/p/w185/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg" },
+    { "name": "Rebecca Ferguson", "role": "Ilsa Faust", "photoUrl": "https://image.tmdb.org/t/p/w185/lJloTOheuQSirSLXNA3JHsrMNfH.jpg" },
+    { "name": "Vanessa Kirby", "role": "The White Widow", "photoUrl": "https://image.tmdb.org/t/p/w185/a8a9U00KL2JJkkekzhNnueIGKKF.jpg" },
+    { "name": "Esai Morales", "role": "Gabriel", "photoUrl": "https://image.tmdb.org/t/p/w185/cNYciYzUzxraGlw0BPql1QePi5H.jpg" },
+    { "name": "Pom Klementieff", "role": "Paris", "photoUrl": "https://image.tmdb.org/t/p/w185/hfUKAI2kXTMMWjno0i4sLPJud5N.jpg" },
+    { "name": "Henry Czerny", "role": "Kittridge", "photoUrl": "https://image.tmdb.org/t/p/w185/zOWZzRmliKf9032IOOq0a3jXhVv.jpg" },
+    { "name": "Shea Whigham", "role": "Briggs", "photoUrl": "https://image.tmdb.org/t/p/w185/qsKe5oze7fdS96BrXDTc5bcxyEl.jpg" }
+  ]
+},
+{
+  "id": 1007,
+  "title": "The Flash",
+  "description": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+  "genre": "Adventure, Action, Science Fiction",
+  "rating": 6.6,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=jprhe-cWKGs",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Ezra Miller", "role": "Barry Allen / The Flash", "photoUrl": "https://image.tmdb.org/t/p/w185/6wmTpbYpmhthaxzM5ss3377F9IV.jpg" },
+    { "name": "Sasha Calle", "role": "Kara Zor-El / Supergirl", "photoUrl": "https://image.tmdb.org/t/p/w185/yLZY25AQOC2xKzsWqteyJTcWPK3.jpg" },
+    { "name": "Michael Keaton", "role": "Bruce Wayne / Batman", "photoUrl": "https://image.tmdb.org/t/p/w185/w6fwAQ7IwEFqtzByA1Wyz2Dwp7R.jpg" },
+    { "name": "Michael Shannon", "role": "General Zod", "photoUrl": "https://image.tmdb.org/t/p/w185/6mMczfjM8CiS1WuBOgo5Xom1TcR.jpg" },
+    { "name": "Ron Livingston", "role": "Henry Allen", "photoUrl": "https://image.tmdb.org/t/p/w185/pr5CjWnkaf5WKTIYh8wtNufjmyb.jpg" },
+    { "name": "Maribel Verdú", "role": "Nora Allen", "photoUrl": "https://image.tmdb.org/t/p/w185/xfpNy6z0eN2jwhv8NQnUxUYGq2P.jpg" },
+    { "name": "Kiersey Clemons", "role": "Iris West", "photoUrl": "https://image.tmdb.org/t/p/w185/iZD6EzMGnuHFjFgmO8G1wyiLrTy.jpg" },
+    { "name": "Antje Traue", "role": "Faora-Ul", "photoUrl": "https://image.tmdb.org/t/p/w185/enfmTZlaXBoaVL1T5XVNe55WbOp.jpg" },
+    { "name": "Saoirse-Monica Jackson", "role": "Patty Spivot", "photoUrl": "https://image.tmdb.org/t/p/w185/5CSLLbQS59BlUPOqaxABQKfnnkz.jpg" },
+    { "name": "Rudy Mancuso", "role": "Albert Desmond", "photoUrl": "https://image.tmdb.org/t/p/w185/7jP4syZQ4ccpd8H2HvyubRLHQcI.jpg" }
+  ]
+},
+{
+  "id": 1008,
+  "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+  "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+  "genre": "Animation, Action, Fantasy, Thriller",
+  "rating": 7.617,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=juD6zgap4-I",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Natsuki Hanae", "role": "Tanjiro Kamado (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/alTb0DlcPIbcwM08WSmxFai58sd.jpg" },
+    { "name": "Hiro Shimono", "role": "Zenitsu Agatsuma (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/yrSDcgFefHtWkFmLnTrcw2t0MV.jpg" },
+    { "name": "Takahiro Sakurai", "role": "Giyu Tomioka (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/8s8owcKmpRAuhzEGjSdRpztthUg.jpg" },
+    { "name": "Akira Ishida", "role": "Akaza (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/jnW2Gn2NlR2uwOCeyOuzypnTmkH.jpg" },
+    { "name": "Yoshitsugu Matsuoka", "role": "Inosuke Hashibira (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/ugDwdWEXnmv43jcbnfAi4XwiQ8C.jpg" },
+    { "name": "Toshihiko Seki", "role": "Muzan Kibutsuji (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/7jUPvx4hxWZWZJgyiCwd8KxWuvI.jpg" },
+    { "name": "Reina Ueda", "role": "Kanao Tsuyuri (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/hlzrvBzeSYejeaTSZDvEWE44Qjj.jpg" },
+    { "name": "Nobuhiko Okamoto", "role": "Genya Shinazugawa (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/7s1K2yQVF5iIWILaOfG7QrMZkXA.jpg" },
+    { "name": "Katsuyuki Konishi", "role": "Tengen Uzui (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/nYM5cH6U7cp4x9dIzW0enmEKmeV.jpg" },
+    { "name": "Akari Kito", "role": "Nezuko Kamado (voice)", "photoUrl": "https://image.tmdb.org/t/p/w185/AoRQOZRC0yINB0WeKnM569rV1wF.jpg" }
+  ]
+},
+{
+  "id": 1009,
+  "title": "The Conjuring: Last Rites",
+  "description": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
+  "genre": "Horror",
+  "rating": 6.661,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/29ES27icY5CzTcMhlz1H4SdQRod.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=3iBhELud1-I",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Vera Farmiga", "role": "Lorraine Warren", "photoUrl": "https://image.tmdb.org/t/p/w185/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg" },
+    { "name": "Patrick Wilson", "role": "Ed Warren", "photoUrl": "https://image.tmdb.org/t/p/w185/tc1ezEfIY8BhCy85svOUDtpBFPt.jpg" },
+    { "name": "Mia Tomlinson", "role": "Judy Warren", "photoUrl": "https://image.tmdb.org/t/p/w185/cBSSODc05j8s8omYfX0Px07AIvr.jpg" },
+    { "name": "Ben Hardy", "role": "Tony Spera", "photoUrl": "https://image.tmdb.org/t/p/w185/s8UEIomgY5AaEmPHkcPAScp68Fw.jpg" },
+    { "name": "Rebecca Calder", "role": "Janet Smurl", "photoUrl": "https://image.tmdb.org/t/p/w185/A43USnarLnfWXDvWimT24cPVfEm.jpg" },
+    { "name": "Tilly Walker", "role": "Carin Smurl", "photoUrl": "https://image.tmdb.org/t/p/w185/oiRyVNlrUHajGyT1d3Kqj4V6Bdf.jpg" },
+    { "name": "Elliot Cowan", "role": "Jack Smurl", "photoUrl": "https://image.tmdb.org/t/p/w185/zxewsfDGYuCqV7gsZjMQct6BXMJ.jpg" },
+    { "name": "Shannon Kook", "role": "Drew Thomas", "photoUrl": "https://image.tmdb.org/t/p/w185/gBJmrtY2fBFfkQRfosLv2MNWx2J.jpg" },
+    { "name": "Steve Coulter", "role": "Father Gordon", "photoUrl": "https://image.tmdb.org/t/p/w185/ng01ren9pCYPIsIwRqC1xHzD5IG.jpg" },
+    { "name": "Kíla Lord Cassidy", "role": "Heather Smurl", "photoUrl": "https://image.tmdb.org/t/p/w185/7vUPASAuPkgfXzS9DQhOo9uTLJc.jpg" }
+  ]
+},
+{
+  "id": 1010,
+  "title": "Harry Potter and the Prisoner of Azkaban",
+  "description": "Year three at Hogwarts means new fun and challenges as Harry learns the delicate art of approaching a Hippogriff, transforming shape-shifting Boggarts into hilarity and even turning back time. But the term also brings danger: soul-sucking Dementors hover over the school, an ally of the accursed He-Who-Cannot-Be-Named lurks within the castle walls, and fearsome wizard Sirius Black escapes Azkaban. And Harry will confront them all.",
+  "genre": "Adventure, Fantasy",
+  "rating": 8.011,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=VwErvYgoH70",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Daniel Radcliffe", "role": "Harry Potter", "photoUrl": "https://image.tmdb.org/t/p/w185/iPg0J9UzAlPj1fLEJNllpW9IhGe.jpg" },
+    { "name": "Rupert Grint", "role": "Ron Weasley", "photoUrl": "https://image.tmdb.org/t/p/w185/q2KZZ0ltTEl7Sf8volNFV1JDEP4.jpg" },
+    { "name": "Emma Watson", "role": "Hermione Granger", "photoUrl": "https://image.tmdb.org/t/p/w185/A14lLCZYDhfYdBa0fFRpwMDiwRN.jpg" },
+    { "name": "Robbie Coltrane", "role": "Rubeus Hagrid", "photoUrl": "https://image.tmdb.org/t/p/w185/jOHs3xvlwRiiG2CLtso5zzmGCXg.jpg" },
+    { "name": "Michael Gambon", "role": "Albus Dumbledore", "photoUrl": "https://image.tmdb.org/t/p/w185/3jdWkDKf4IODbG4JKTeaC7AzxZH.jpg" },
+    { "name": "Gary Oldman", "role": "Sirius Black", "photoUrl": "https://image.tmdb.org/t/p/w185/2v9FVVBUrrkW2m3QOcYkuhq9A6o.jpg" },
+    { "name": "David Thewlis", "role": "Remus Lupin", "photoUrl": "https://image.tmdb.org/t/p/w185/sNuYyT8ocLlQr3TdAW9CoKVbCU8.jpg" },
+    { "name": "Timothy Spall", "role": "Peter Pettigrew", "photoUrl": "https://image.tmdb.org/t/p/w185/dEhBrDYNVpfWMDx8vpcrp4pXDwl.jpg" },
+    { "name": "Alan Rickman", "role": "Severus Snape", "photoUrl": "https://image.tmdb.org/t/p/w185/nKl8ZRYjBJya7aj7phJUyrtSll6.jpg" },
+    { "name": "Tom Felton", "role": "Draco Malfoy", "photoUrl": "https://image.tmdb.org/t/p/w185/4fO0PjiBbNFEnYLPe55xUUP7Wgf.jpg" }
+  ]
+},
+{
+  "id": 1011,
+  "title": "F1",
+  "description": "Racing legend Sonny Hayes is coaxed out of retirement to lead a struggling Formula 1 team—and mentor a young hotshot driver—while chasing one more chance at glory.",
+  "genre": "Action, Drama",
+  "rating": 7.817,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/9PXZIUsSDh4alB80jheWX4fhZmy.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=9vE74AROgM8",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Brad Pitt", "role": "Sonny Hayes", "photoUrl": "https://image.tmdb.org/t/p/w185/9OfnD7lxgIj3BNQpJFnwxnwl6w5.jpg" },
+    { "name": "Damson Idris", "role": "Joshua Pearce", "photoUrl": "https://image.tmdb.org/t/p/w185/4jKOg4jCqNwXyrYd3coqgmCqkMy.jpg" },
+    { "name": "Javier Bardem", "role": "Ruben Cervantes", "photoUrl": "https://image.tmdb.org/t/p/w185/eCBiiPvBfIY7exDQwH0vEM6Bf3c.jpg" },
+    { "name": "Kerry Condon", "role": "Kate McKenna", "photoUrl": "https://image.tmdb.org/t/p/w185/8RO25vJxQSoNdhsVbiAHOsiGfvl.jpg" },
+    { "name": "Tobias Menzies", "role": "Peter Banning", "photoUrl": "https://image.tmdb.org/t/p/w185/hGhAw2obMEOu1K0ed9b3jds9thf.jpg" },
+    { "name": "Kim Bodnia", "role": "Kaspar Smolinski", "photoUrl": "https://image.tmdb.org/t/p/w185/koWU6vb82cuCDLeYE1erqnQ39cW.jpg" },
+    { "name": "Sarah Niles", "role": "Bernadette", "photoUrl": "https://image.tmdb.org/t/p/w185/ySelhnmCCX9VnlPvceO9c5XOelK.jpg" },
+    { "name": "Will Merrick", "role": "Nickleby", "photoUrl": "https://image.tmdb.org/t/p/w185/3IVuzHqE8FIBV679o4VGrZInpsE.jpg" },
+    { "name": "Joseph Balderrama", "role": "Fazio", "photoUrl": "https://image.tmdb.org/t/p/w185/8BwRFsXzWD25dPih6IePcRD3EjT.jpg" },
+    { "name": "Abdul Salis", "role": "Dodge", "photoUrl": "https://image.tmdb.org/t/p/w185/2gDH3kNzUr4IUZLbCiYR9OCTjGa.jpg" }
+  ]
+},
+{
+  "id": 1012,
+  "title": "Final Destination Bloodlines",
+  "description": "Plagued by a violent recurring nightmare, college student Stefanie heads home to track down the one person who might be able to break the cycle and save her family from the grisly demise that inevitably awaits them all.",
+  "genre": "Horror, Mystery",
+  "rating": 7.135,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/6WxhEvFsauuACfv8HyoVX6mZKFj.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=YBv7CPxD8fI",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Kaitlyn Santa Juana", "role": "Stefani Reyes", "photoUrl": "https://image.tmdb.org/t/p/w185/75Tdc3wg9mklJHy5LEj8OMjcPw8.jpg" },
+    { "name": "Teo Briones", "role": "Charlie Reyes", "photoUrl": "https://image.tmdb.org/t/p/w185/cyykbm4Xht2Pi7brr88FcmS1LPb.jpg" },
+    { "name": "Rya Kihlstedt", "role": "Darlene Campbell", "photoUrl": "https://image.tmdb.org/t/p/w185/86ysgxNPkckt8jp715X79CdopB7.jpg" },
+    { "name": "Richard Harmon", "role": "Erik", "photoUrl": "https://image.tmdb.org/t/p/w185/OMc1TCt9GEJddnVI1o5BPIAoLV.jpg" },
+    { "name": "Owen Patrick Joyner", "role": "Bobby", "photoUrl": "https://image.tmdb.org/t/p/w185/eTZiPEsHZmmgQKEhC8HDf28sFmY.jpg" },
+    { "name": "Anna Lore", "role": "Julia", "photoUrl": "https://image.tmdb.org/t/p/w185/zNurGVtAxvVGnpgyG9kvBUG4nVf.jpg" },
+    { "name": "Alex Zahara", "role": "Uncle Howard", "photoUrl": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg" },
+    { "name": "April Telek", "role": "Aunt Brenda", "photoUrl": "https://image.tmdb.org/t/p/w185/2D80ewwe0KVbsyXRFIVoyzKbIe.jpg" },
+    { "name": "Andrew Tinpo Lee", "role": "Marty Reyes", "photoUrl": "https://image.tmdb.org/t/p/w185/hod73YmXiv3ZfDCMoJwBYXPqPzZ.jpg" },
+    { "name": "Tony Todd", "role": "William John Bludworth", "photoUrl": "https://image.tmdb.org/t/p/w185/5fZ0hKcRtFIFdgBFSL40LVFylfW.jpg" }
+  ]
+},
+{
+  "id": 1013,
+  "title": "Harry Potter and the Goblet of Fire",
+  "description": "When Harry Potter's name emerges from the Goblet of Fire, he becomes a competitor in a grueling battle for glory among three wizarding schools—the Triwizard Tournament. But since Harry never submitted his name for the Tournament, who did? Now Harry must confront a deadly dragon, fierce water demons and an enchanted maze only to find himself in the cruel grasp of He Who Must Not Be Named.",
+  "genre": "Adventure, Fantasy",
+  "rating": 7.801,
+  "duration": "Duration not fetched",
+  "posterUrl": "https://image.tmdb.org/t/p/w500/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=4xkFJgcCQRE",
+  "showtimes": [
+    "2025-09-14T04:30:00.000Z",
+    "2025-09-14T08:00:00.000Z",
+    "2025-09-14T11:30:00.000Z",
+    "2025-09-14T16:00:00.000Z"
+  ],
+  "cast": [
+    { "name": "Daniel Radcliffe", "role": "Harry Potter", "photoUrl": "https://image.tmdb.org/t/p/w185/iPg0J9UzAlPj1fLEJNllpW9IhGe.jpg" },
+    { "name": "Rupert Grint", "role": "Ron Weasley", "photoUrl": "https://image.tmdb.org/t/p/w185/q2KZZ0ltTEl7Sf8volNFV1JDEP4.jpg" },
+    { "name": "Emma Watson", "role": "Hermione Granger", "photoUrl": "https://image.tmdb.org/t/p/w185/A14lLCZYDhfYdBa0fFRpwMDiwRN.jpg" },
+    { "name": "Brendan Gleeson", "role": "Alastor \"Mad-Eye\" Moody", "photoUrl": "https://image.tmdb.org/t/p/w185/ctPPJu5ZYDZr1IPmzoNpezczrm0.jpg" },
+    { "name": "Michael Gambon", "role": "Albus Dumbledore", "photoUrl": "https://image.tmdb.org/t/p/w185/3jdWkDKf4IODbG4JKTeaC7AzxZH.jpg" },
+    { "name": "Robert Pattinson", "role": "Cedric Diggory", "photoUrl": "https://image.tmdb.org/t/p/w185/8A4PS5iG7GWEAVFftyqMZKl3qcr.jpg" },
+    { "name": "Ralph Fiennes", "role": "Lord Voldemort", "photoUrl": "https://image.tmdb.org/t/p/w185/u29BOqiV5GCQ8k8WUJM50i9xlBf.jpg" },
+    { "name": "Robbie Coltrane", "role": "Rubeus Hagrid", "photoUrl": "https://image.tmdb.org/t/p/w185/jOHs3xvlwRiiG2CLtso5zzmGCXg.jpg" },
+    { "name": "Alan Rickman", "role": "Severus Snape", "photoUrl": "https://image.tmdb.org/t/p/w185/nKl8ZRYjBJya7aj7phJUyrtSll6.jpg" },
+    { "name": "David Tennant", "role": "Barty Crouch Junior", "photoUrl": "https://image.tmdb.org/t/p/w185/pQHLJEOEcKpPpyiIheh47AJ5INS.jpg" }
+  ]
+}
+  ]}
