@@ -1,0 +1,11 @@
+# Build and compiled files
+/dist/
+*.log
+
+# Dependencies
+node_modules/
+
+# Sensitive or local files
+.env
+.DS_Store
+
