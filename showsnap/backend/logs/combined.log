@@ -609,3 +609,51 @@
 [2025-09-23 00:53:33] INFO: 🚀 Server running on port 5000
 [2025-09-23 00:53:59] INFO: ✅ Connected to MongoDB
 [2025-09-23 00:53:59] INFO: 🚀 Server running on port 5000
+[2025-09-23 00:54:46] INFO: ✅ Connected to MongoDB
+[2025-09-23 00:54:46] INFO: 🚀 Server running on port 5000
+[2025-09-23 01:51:39] INFO: ✅ Connected to MongoDB
+[2025-09-23 01:51:39] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:05:24] INFO: 🎭 Fetched 2 theaters
+[2025-09-23 02:05:24] INFO: 🎭 Fetched 2 theaters
+[2025-09-23 02:05:57] INFO: 🎭 Fetched 2 theaters
+[2025-09-23 02:05:57] INFO: 🎭 Fetched 2 theaters
+[2025-09-23 02:06:09] WARN: ⚠️ 404 - Not Found - /book/68d145d69eae4b92ca41405f
+[2025-09-23 02:14:13] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:14:13] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:16:17] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:16:17] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:19:42] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:19:42] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:20:27] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:20:27] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:21:32] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:21:32] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:22:52] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:22:52] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:23:04] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:23:04] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:24:29] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:24:29] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:27:44] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:27:44] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:30:16] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:30:16] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:30:22] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:30:22] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:37:27] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:37:27] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:37:39] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:37:39] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:37:45] INFO: 🛑 MongoDB connection closed due to app termination
+[2025-09-23 02:39:38] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:39:38] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:39:43] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:43] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:43] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:43] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:57] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:57] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:57] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:39:58] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:40:03] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:40:04] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')

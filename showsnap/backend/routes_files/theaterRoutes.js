@@ -1,7 +1,8 @@
+// routes/theaterRoutes.js
+
 import express from 'express';
 import {
   getTheaters,
-  getTheatersByMovie,
   createTheater,
   updateTheater,
   deleteTheater,
@@ -11,11 +12,12 @@ import adminOnly from '../middleware/adminMiddleware.js';
 
 const router = express.Router();
 
-// 🎭 Public Routes
+// Public Routes
 router.get('/', getTheaters);
-router.get('/by-movie/:title', getTheatersByMovie);
+// ❌ Remove this route as it is no longer needed.
+// router.get('/by-movie/:id', getTheatersByMovieId);
 
-// 🛠️ Admin Routes (protected)
+// Admin Routes (protected)
 router.post('/', protect, adminOnly(), createTheater);
 router.put('/:id', protect, adminOnly(), updateTheater);
 router.delete('/:id', protect, adminOnly(), deleteTheater);

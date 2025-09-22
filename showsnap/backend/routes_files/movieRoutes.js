@@ -1,31 +1,25 @@
+// routes/movieRoutes.js
+
 import express from 'express';
 import {
   getMovies,
-  getMovieById
+  getMovieById, // ✅ Make sure this is imported
+  createMovie,
+  updateMovie,
+  deleteMovie,
 } from '../controllers/movieController.js';
-
-import { createMovie } from '../controllers/adminController.js'; // ✅ Corrected Import
-
-import protect from '../middleware/authMiddleware.js';    // 🔐 Auth middleware
-import adminOnly from '../middleware/adminMiddleware.js'; // 🛡️ Admin check
+import protect from '../middleware/authMiddleware.js';
+import adminOnly from '../middleware/adminMiddleware.js';
 
 const router = express.Router();
 
-// =======================
-// 🎬 Public Movie Routes
-// =======================
-
-// Get all movies with optional filters, pagination, sorting
+// 🎭 Public Routes
 router.get('/', getMovies);
+router.get('/:id', getMovieById); // ✅ This route is now used by BookMovie.jsx
 
-// Get a single movie by ID
-router.get('/:id', getMovieById);
-
-// =======================
-// 🆕 Admin Movie Routes
-// =======================
-
-// Create a new movie (admin only)
-router.post('/', protect, adminOnly(), createMovie); // () allows role flexibility
+// 🛠️ Admin Routes (protected)
+router.post('/', protect, adminOnly(), createMovie);
+router.put('/:id', protect, adminOnly(), updateMovie);
+router.delete('/:id', protect, adminOnly(), deleteMovie);
 
 export default router;
