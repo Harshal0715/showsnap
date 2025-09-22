@@ -25,6 +25,11 @@ try {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
+  // ✅ Add a welcome route for the root URL
+  app.get('/', (req, res) => {
+    res.json({ message: "Welcome to the ShowSnap API! Please use /api/theaters or /api/movies to access data." });
+  });
+
   // =======================
   // 📦 Routes
   // =======================
@@ -39,6 +44,7 @@ try {
   // =======================
   // 404 Handler
   // =======================
+  // ✅ This handler should be placed after all defined routes.
   app.use((req, res) => {
     logger.warn(`⚠️ 404 - Not Found - ${req.originalUrl}`);
     res.status(404).json({ error: 'Route not found' });

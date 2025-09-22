@@ -657,3 +657,8 @@
 [2025-09-23 02:39:58] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
 [2025-09-23 02:40:03] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
 [2025-09-23 02:40:04] ERROR: ❌ Error fetching movie by ID: Cannot read properties of undefined (reading 'toString')
+[2025-09-23 02:41:23] INFO: ✅ Connected to MongoDB
+[2025-09-23 02:41:23] INFO: 🚀 Server running on port 5000
+[2025-09-23 02:41:43] INFO: 🧾 Razorpay order created: order_RKn78ZjobVLByM
+[2025-09-23 02:42:07] INFO: 🔍 Verifying payment with payload:
+[2025-09-23 02:42:07] INFO: ✅ Booking confirmed: 68d1bba70bf5d631f21e15c1
