@@ -11,6 +11,8 @@ import {
   getAllMovies,
   pingAdmin // ✅ Optional health check route
 } from '../controllers/adminController.js';
+import { searchTmdbMovie } from '../controllers/tmdbController.js';
+import { getTmdbMovieDetails } from '../controllers/tmdbController.js';
 
 import protect from '../middleware/authMiddleware.js';
 import adminOnly from '../middleware/adminMiddleware.js';
@@ -41,5 +43,8 @@ router.get('/users', ...adminAccess, getAllUsers);
 
 // 🛠 Admin Health Check (Optional)
 router.get('/ping', ...adminAccess, pingAdmin); // ✅ Useful for frontend token validation
+
+router.get('/tmdb/search', ...adminAccess, adminOnly(), searchTmdbMovie);
+router.get('/tmdb/movie/:id', ...adminAccess, getTmdbMovieDetails);
 
 export default router;

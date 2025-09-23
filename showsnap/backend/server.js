@@ -34,7 +34,7 @@ try {
   // 📦 Routes
   // =======================
   app.use('/api/theaters', theaterRoutes);
-  app.use('/api/movies', movieRoutes);
+  app.use('/api', movieRoutes);
   app.use('/api/users', userRoutes);
   app.use('/api/bookings', bookingRoutes);
   app.use('/api/payments', paymentRoutes);

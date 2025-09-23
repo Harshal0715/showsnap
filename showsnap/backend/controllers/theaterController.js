@@ -1,9 +1,6 @@
-// controllers/theaterController.js
-
 import Theater from '../models/Theater.js';
 import Movie from '../models/Movie.js';
 import logger from '../utils/logger.js';
-import mongoose from 'mongoose';
 
 /**
  * GET /api/theaters
@@ -17,7 +14,7 @@ export const getTheaters = async (req, res) => {
     if (location?.trim()) query.location = { $regex: location.trim(), $options: 'i' };
     if (name?.trim()) query.name = { $regex: name.trim(), $options: 'i' };
 
-    const theaters = await Theater.find(query).populate('movies', 'title posterUrl');
+    const theaters = await Theater.find(query);
     logger.info(`🎭 Fetched ${theaters.length} theaters`);
 
     res.status(200).json({ count: theaters.length, theaters });
@@ -29,36 +26,36 @@ export const getTheaters = async (req, res) => {
 
 /**
  * GET /api/theaters/by-movie/:id
- * Fetch theaters and their showtimes for a specific movie ID
+ * Fetch theaters showing a specific movie by ID
  */
-export const getTheatersByMovieId = async (req, res) => {
+export const getTheatersByMovie = async (req, res) => {
   try {
-    const { id } = req.params; // ✅ Using 'id' to match the route
+    const { id } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({ error: 'Invalid movie ID' });
-    }
+    const movie = await Movie.findById(id);
+    if (!movie) return res.status(404).json({ error: 'Movie not found' });
 
     const theaters = await Theater.find({ movies: id }).lean();
 
-    if (!theaters.length) {
-      return res.status(404).json({ message: `No theaters found for this movie.` });
-    }
-    
-    const theatersWithShowtimes = theaters.map(theater => {
-      const movieShowtimes = theater.showtimes.filter(showtime =>
-        showtime.movie.toString() === id && new Date(showtime.startTime) > new Date()
-      );
-      return {
-        ...theater,
-        showtimes: movieShowtimes
-      };
-    }).filter(t => t.showtimes.length > 0);
+    const filtered = theaters.map(t => ({
+      _id: t._id,
+      name: t.name,
+      location: t.location,
+      showtimes: t.showtimes
+        .filter(s => s.movie?.toString() === id.toString())
+        .sort((a, b) => new Date(a.startTime) - new Date(b.startTime))
+        .map(s => ({
+          _id: s._id,
+          startTime: s.startTime,
+          screen: s.screen,
+          availableSeats: s.availableSeats
+        }))
+    }));
 
-    res.status(200).json({ count: theatersWithShowtimes.length, theaters: theatersWithShowtimes });
+    res.status(200).json({ count: filtered.length, theaters: filtered });
   } catch (err) {
-    logger.error(`❌ Error fetching theaters by movie ID: ${err.message}`);
-    res.status(500).json({ error: 'Server error while fetching theaters by movie ID' });
+    logger.error(`❌ Error fetching theaters by movie: ${err.message}`);
+    res.status(500).json({ error: 'Server error while fetching theaters by movie' });
   }
 };
 
@@ -68,38 +65,28 @@ export const getTheatersByMovieId = async (req, res) => {
  */
 export const createTheater = async (req, res) => {
   try {
-    const { name, location, showtimes, movies } = req.body;
+    const { name, location, showtimes, movies = [], movieTitles = [] } = req.body;
 
-    if (!name?.trim() || !location?.trim() || !movies?.length) {
-      return res.status(400).json({ error: 'Name, location, and at least one movie are required' });
-    }
-
-    if (!Array.isArray(movies) || !movies.every(id => mongoose.Types.ObjectId.isValid(id))) {
-      return res.status(400).json({ error: 'movies must be an array of valid ObjectIds' });
-    }
-
-    const movieCount = await Movie.countDocuments({ _id: { $in: movies } });
-    if (movieCount !== movies.length) {
-      return res.status(400).json({ error: 'One or more movie IDs are invalid' });
-    }
-    
-    if (!Array.isArray(showtimes) || showtimes.length === 0) {
-      return res.status(400).json({ error: 'At least one showtime is required' });
-    }
-    for (const st of showtimes) {
-      if (!st.movie || !st.startTime || !st.screen) {
-        return res.status(400).json({ error: 'Each showtime must have a movie, startTime, and screen' });
-      }
+    if (!name?.trim() || !location?.trim() || !Array.isArray(showtimes) || showtimes.length === 0) {
+      return res.status(400).json({ error: 'Name, location and at least one showtime are required' });
     }
 
     const existing = await Theater.findOne({ name: name.trim(), location: location.trim() });
     if (existing) return res.status(409).json({ error: 'Theater already exists at this location' });
 
+    const normalizedShowtimes = showtimes.map(s => ({
+      movie: s.movie,
+      startTime: new Date(s.startTime),
+      screen: s.screen || 'Screen 1',
+      availableSeats: s.availableSeats || 100
+    }));
+
     const newTheater = new Theater({
       name: name.trim(),
       location: location.trim(),
-      showtimes,
+      showtimes: normalizedShowtimes,
       movies,
+      movieTitles
     });
 
     const saved = await newTheater.save();
@@ -123,9 +110,14 @@ export const updateTheater = async (req, res) => {
 
     if (updates.name) updates.name = updates.name.trim();
     if (updates.location) updates.location = updates.location.trim();
-    
-    if (updates.movies && !Array.isArray(updates.movies)) {
-      return res.status(400).json({ error: 'movies must be an array' });
+
+    if (Array.isArray(updates.showtimes)) {
+      updates.showtimes = updates.showtimes.map(s => ({
+        movie: s.movie,
+        startTime: new Date(s.startTime),
+        screen: s.screen || 'Screen 1',
+        availableSeats: s.availableSeats || 100
+      }));
     }
 
     const updated = await Theater.findByIdAndUpdate(id, updates, { new: true, runValidators: true });

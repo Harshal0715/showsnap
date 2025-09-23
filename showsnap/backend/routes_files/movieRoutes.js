@@ -1,25 +1,19 @@
-// routes/movieRoutes.js
-
 import express from 'express';
 import {
   getMovies,
-  getMovieById, // ✅ Make sure this is imported
-  createMovie,
-  updateMovie,
-  deleteMovie,
+  getMovieById,
+  getAllGenres
 } from '../controllers/movieController.js';
-import protect from '../middleware/authMiddleware.js';
-import adminOnly from '../middleware/adminMiddleware.js';
 
 const router = express.Router();
 
-// 🎭 Public Routes
-router.get('/', getMovies);
-router.get('/:id', getMovieById); // ✅ This route is now used by BookMovie.jsx
+// 🎬 Fetch all movies with filters, pagination, and sorting
+router.get('/movies', getMovies);
 
-// 🛠️ Admin Routes (protected)
-router.post('/', protect, adminOnly(), createMovie);
-router.put('/:id', protect, adminOnly(), updateMovie);
-router.delete('/:id', protect, adminOnly(), deleteMovie);
+// 🎥 Fetch a single movie by ID with populated theaters
+router.get('/movies/:id', getMovieById);
+
+// 🎭 Get all unique genres for filtering UI
+router.get('/movies/genres', getAllGenres);
 
 export default router;

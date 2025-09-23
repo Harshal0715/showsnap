@@ -20,21 +20,26 @@ function AdminDashboard() {
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
+  const token = localStorage.getItem('token');
 
   useEffect(() => {
     const loadAdminData = async () => {
-      if (!user || !['admin', 'superadmin'].includes(user.role)) {
-        navigate('/');
+      if (!token || !user || !['admin', 'superadmin'].includes(user.role)) {
+        toast.error('Unauthorized access. Please log in.');
+        navigate('/login');
         return;
       }
 
       try {
-        await pingAdmin();
+        await pingAdmin({ headers: { Authorization: `Bearer ${token}` } });
 
         const [movieRes, bookingRes, statsRes] = await Promise.all([
-          fetchAdminMovies(),
-          getAllBookings(),
-          getAdminStats()
+          fetchAdminMovies({ headers: { Authorization: `Bearer ${token}` } }),
+          getAllBookings({ headers: { Authorization: `Bearer ${token}` } }),
+          getAdminStats({
+            headers: { Authorization: `Bearer ${token}` },
+            timeout: 15000
+          })
         ]);
 
         const movieList = Array.isArray(movieRes?.data?.movies)
@@ -61,14 +66,16 @@ function AdminDashboard() {
     };
 
     loadAdminData();
-  }, [navigate, user]);
+  }, [navigate, user, token]);
 
   const handleDelete = async (movieId) => {
     if (!window.confirm('Are you sure you want to delete this movie?')) return;
 
     setDeletingMovieId(movieId);
     try {
-      await deleteMovie(movieId);
+      await deleteMovie(movieId, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
       setMovies(prev => prev.filter(m => m._id !== movieId));
       toast.success('Movie deleted successfully');
     } catch (err) {

@@ -1,11 +1,5 @@
-# Build and compiled files
-/dist/
-*.log
-
-# Dependencies
-node_modules/
-
-# Sensitive or local files
-.env
-.DS_Store
-
+frontend/node_modules/
+frontend/build/
+showsnap/backend/node_modules/
+showsnap/backend/logs/
+*.env

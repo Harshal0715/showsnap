@@ -13,41 +13,40 @@ function Login() {
   const { user, setUser, setIsAuthenticated } = useContext(AuthContext);
 
   useEffect(() => {
-  if (user && window.location.pathname === '/login') {
-    const role = localStorage.getItem('role');
-    navigate(role === 'admin' ? '/admin' : '/');
-  }
-}, [user, navigate]);
-
+    if (user && window.location.pathname === '/login') {
+      const role = localStorage.getItem('role');
+      navigate(role === 'admin' ? '/admin' : '/');
+    }
+  }, [user, navigate]);
 
   const handleLogin = async (e) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
+  e.preventDefault();
+  setError('');
+  setLoading(true);
 
-    try {
-      const res = await loginUser({ email, password });
-      const { token, user: userData } = res.data || {};
+  try {
+    const res = await loginUser({ email, password });
+    const { token, user: userData } = res.data || {};
 
-      if (token && userData) {
-        localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(userData));
-        localStorage.setItem('role', userData.role || 'user');
+    if (token && userData) {
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify(userData));
+      localStorage.setItem('role', userData.role || 'user');
 
-        setUser(userData);
-        setIsAuthenticated(true);
+      setUser(userData);
+      setIsAuthenticated(true);
 
-        navigate(userData.role === 'admin' ? '/admin' : '/');
-      } else {
-        setError('Login failed: Missing token or user data');
-      }
-    } catch (err) {
-      console.error('❌ Login error:', err.message);
-      setError(err.response?.data?.error || 'Invalid email or password');
-    } finally {
-      setLoading(false);
+      navigate(userData.role === 'admin' ? '/admin' : '/');
+    } else {
+      setError('Login failed: Missing token or user data');
     }
-  };
+  } catch (err) {
+    console.error('❌ Login error:', err.message);
+    setError(err.response?.data?.error || 'Invalid email or password');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 px-4">
@@ -58,11 +57,13 @@ function Login() {
         <form onSubmit={handleLogin} className="space-y-5">
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-800 mb-1">Email</label>
             <input
+              id="email"
               type="email"
               placeholder="you@example.com"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              aria-label="Email"
+              className="w-full px-4 py-2 border rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -71,16 +72,18 @@ function Login() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-800 mb-1">Password</label>
             <input
+              id="password"
               type={showPassword ? 'text' : 'password'}
               placeholder="••••••••"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black placeholder-gray-400 bg-white"
+              aria-label="Password"
+              className="w-full px-4 py-2 border rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <div className="mt-2 text-sm text-gray-600">
+            <div className="mt-2 text-sm text-gray-700">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -94,15 +97,15 @@ function Login() {
           </div>
 
           {/* Remember & Forgot Password */}
-          <div className="flex items-center justify-between text-sm text-gray-600">
+          <div className="flex items-center justify-between text-sm text-gray-700">
             <label className="flex items-center cursor-pointer">
               <input type="checkbox" className="mr-2" />
               Remember me
             </label>
-            
+
             <Link to="/forgot-password" className="text-red-600 hover:underline">
-  Forgot password?
-</Link>
+              Forgot password?
+            </Link>
           </div>
 
           {/* Submit Button */}
@@ -118,7 +121,7 @@ function Login() {
         </form>
 
         {/* Signup Link */}
-        <p className="text-sm mt-6 text-center text-gray-600">
+        <p className="text-sm mt-6 text-center text-gray-700">
           New to ShowSnap?{' '}
           <Link to="/signup" className="text-red-600 font-semibold hover:underline">
             Create an account

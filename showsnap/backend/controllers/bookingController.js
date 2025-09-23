@@ -82,6 +82,7 @@ const createBooking = async ({
       subject: `Your ShowSnap Booking for ${movie.title}`,
       html: emailHTML
     });
+    log.info(`📩 Confirmation email sent to ${user.email}`);
   } catch (emailErr) {
     log.warn(`⚠️ Email failed to ${user.email}: ${emailErr.message}`);
   }
@@ -146,27 +147,50 @@ const getBookingById = async (req, res) => {
 };
 
 // ❌ Cancel booking
-const cancelBooking = async (req, res) => {
+export const cancelBooking = async (req, res) => {
   try {
-    const { bookingId } = req.params;
-    const userId = req.user._id;
+    const booking = await Booking.findByIdAndUpdate(
+      req.params.bookingId,
+      { status: 'cancelled' },
+      { new: true }
+    ).populate('user movie');
 
-    if (!mongoose.Types.ObjectId.isValid(bookingId)) {
-      return res.status(400).json({ error: 'Invalid booking ID' });
-    }
-
-    const booking = await Booking.findOne({ _id: bookingId, user: userId });
     if (!booking) {
-      return res.status(404).json({ error: 'Booking not found or unauthorized' });
+      return res.status(404).json({ message: 'Booking not found' });
     }
 
-    booking.status = 'cancelled';
-    await booking.save();
+    log.info(`🚫 Booking cancelled: ${booking._id}`);
 
-    res.json({ success: true, booking });
-  } catch (err) {
-    log.error(`❌ Error cancelling booking: ${err.message}`);
-    res.status(500).json({ error: 'Server error while cancelling booking' });
+    const emailHTML = `
+      <div style="font-family: Arial, sans-serif; padding: 20px;">
+        <h2>Booking Cancelled</h2>
+        <p>Hi ${booking.user.name},</p>
+        <p>Your booking for <strong>${booking.movie.title}</strong> has been cancelled.</p>
+        <ul>
+          <li><strong>Theater:</strong> ${booking.theater.name}</li>
+          <li><strong>Location:</strong> ${booking.theater.location}</li>
+          <li><strong>Showtime:</strong> ${new Date(booking.showtimeDate).toLocaleString()}</li>
+          <li><strong>Seats:</strong> ${booking.seats.join(', ')}</li>
+        </ul>
+        <p>We hope to see you again on <strong>ShowSnap</strong> 🎬</p>
+      </div>
+    `;
+
+    try {
+      await sendEmail({
+        to: booking.user.email,
+        subject: `Your ShowSnap Booking for ${booking.movie.title} was Cancelled`,
+        html: emailHTML
+      });
+      log.info(`📩 Cancellation email sent to ${booking.user.email}`);
+    } catch (emailErr) {
+      log.warn(`⚠️ Email failed to ${booking.user.email}: ${emailErr.message}`);
+    }
+
+    res.status(200).json({ success: true, booking });
+  } catch (error) {
+    log.error(`❌ Cancel booking error: ${error.message}`);
+    res.status(500).json({ message: 'Server error' });
   }
 };
 
@@ -174,6 +198,5 @@ export {
   createBooking,
   getBookedSeats,
   getAllUserBookings,
-  getBookingById,
-  cancelBooking
+  getBookingById
 };

@@ -1,5 +1,3 @@
-// pages/BookMovie.jsx
-
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import handleRazorpayPayment from '../components/RazorpayCheckout';
@@ -45,12 +43,18 @@ function BookMovie() {
       setError('');
 
       try {
-        // ✅ Make a single API call to fetch the movie by ID, which will now include theaters
         const movieRes = await axios.get(`http://localhost:5000/api/movies/${id}`);
-        setMovie(movieRes.data);
-        // ✅ Set the theaters state from the fetched movie data
-        setTheaters(movieRes.data.theaters);
-        
+        const movieData = movieRes.data;
+
+        const normalizedTheaters = Array.isArray(movieData.theaters) && typeof movieData.theaters[0] === 'object'
+          ? movieData.theaters
+          : Array.isArray(movieData.embeddedTheaters)
+            ? movieData.embeddedTheaters
+            : [];
+
+        const validTheaters = normalizedTheaters.filter(t => Array.isArray(t.showtimes) && t.showtimes.length);
+        setMovie(movieData);
+        setTheaters(validTheaters);
       } catch (err) {
         console.error('❌ Error fetching movie or theaters:', err.response?.data?.error || err.message);
         setError('Failed to load movie or theater data. The movie might not be playing in any theaters.');
@@ -80,7 +84,7 @@ function BookMovie() {
   const handleBooking = async () => {
     setError('');
     setSuccess('');
-    
+
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -98,15 +102,17 @@ function BookMovie() {
       setError(`Please select a showtime and exactly ${seatCount} seat(s).`);
       return null;
     }
-    
+
     const selectedTheater = theaters[parseInt(selectedTheaterIndex)];
-    const selectedShowtimeObj = selectedTheater.showtimes.find(st => st.startTime === selectedShowtime);
+    const selectedShowtimeObj = selectedTheater.showtimes.find(st =>
+      new Date(st.startTime || st).toISOString() === new Date(selectedShowtime).toISOString()
+    );
 
     if (!selectedShowtimeObj) {
       setError('Invalid showtime selected.');
       return null;
     }
-    
+
     return {
       movieId: id,
       seats: selectedSeats,
@@ -143,7 +149,7 @@ function BookMovie() {
   };
 
   const user = JSON.parse(localStorage.getItem('user'));
-  
+
   if (loading) {
     return (
       <div className="p-6 text-center text-lg animate-pulse text-gray-600">
@@ -155,7 +161,7 @@ function BookMovie() {
   if (error) {
     return <div className="p-6 text-center text-red-500">{error}</div>;
   }
-  
+
   if (!movie) {
     return <div className="p-6 text-center text-red-500">Movie not found.</div>;
   }
@@ -170,6 +176,8 @@ function BookMovie() {
           className="w-64 h-[360px] object-cover rounded-xl shadow-lg"
         />
       </div>
+
+      {/* Trailer */}
       {movie.trailerUrl && (
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2 text-center">Watch Trailer</h3>
@@ -185,12 +193,16 @@ function BookMovie() {
           </div>
         </div>
       )}
+
+      {/* Movie Info */}
       <div className="text-center mb-6">
         <p className="text-gray-700">{movie.description}</p>
         <p><strong>Genres:</strong> {movie.genre || 'N/A'}</p>
         <p><strong>Rating:</strong> {movie.rating || 'N/A'}/10</p>
       </div>
-      {movie.cast && movie.cast.length > 0 && (
+
+      {/* Cast */}
+      {movie.cast?.length > 0 && (
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-4 text-center">Cast & Crew</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center">
@@ -210,6 +222,8 @@ function BookMovie() {
           </div>
         </div>
       )}
+
+      {/* Booking Controls */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div>
           <label className="block font-semibold mb-1">Select Theater</label>
@@ -220,16 +234,17 @@ function BookMovie() {
               setSelectedShowtime('');
               setSelectedSeats([]);
             }}
-            className="border p-2 rounded w-full bg-white"
+                        className="border p-2 rounded w-full bg-white"
           >
             <option value="">-- Choose a theater --</option>
-            {theaters.map((t, idx) => (
-              <option key={t._id} value={idx}>
+            {theaters.map((t, index) => (
+              <option key={t._id || index} value={index}>
                 {t.name} ({t.location})
               </option>
             ))}
           </select>
         </div>
+
         <div>
           <label className="block font-semibold mb-1">Select Showtime</label>
           <select
@@ -239,13 +254,16 @@ function BookMovie() {
             disabled={!selectedTheater}
           >
             <option value="">-- Choose a showtime --</option>
-            {selectedTheater?.showtimes?.map((st) => (
-              <option key={st._id} value={st.startTime}>
-                {formatShowtime(st.startTime)}
-              </option>
-            ))}
+            {selectedTheater?.showtimes
+              ?.sort((a, b) => new Date(a.startTime || a) - new Date(b.startTime || b))
+              .map((st, idx) => (
+                <option key={st._id || idx} value={st.startTime || st}>
+                  {formatShowtime(st.startTime || st)}
+                </option>
+              ))}
           </select>
         </div>
+
         <div>
           <label className="block font-semibold mb-1">Number of Seats</label>
           <select
@@ -262,11 +280,14 @@ function BookMovie() {
           </select>
         </div>
       </div>
+
+      {/* 🎟️ Seat Grid */}
       <div className="flex justify-center mb-4 mt-6">
         <div className="w-2/3 text-center text-sm font-semibold text-white bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500 rounded-t-full py-1 shadow-md">
           SCREEN
         </div>
       </div>
+
       <div className="space-y-3 mt-4 mb-6">
         {rows.map(row => (
           <div key={row} className="flex gap-2 justify-center">
@@ -292,6 +313,8 @@ function BookMovie() {
           </div>
         ))}
       </div>
+
+      {/* 📋 Booking Summary */}
       <div className="mt-6 p-4 bg-gray-100 rounded shadow-sm text-center">
         <h3 className="text-lg font-semibold mb-2">Booking Summary</h3>
         <p><strong>Movie:</strong> {movie.title}</p>
@@ -301,6 +324,8 @@ function BookMovie() {
         <p><strong>User:</strong> {user?.name} ({user?.email})</p>
         <p className="text-indigo-600 font-bold mt-2">Total Price: ₹{totalPrice}</p>
       </div>
+
+      {/* 💳 Payment Button */}
       <button
         onClick={initiatePayment}
         disabled={selectedSeats.length !== seatCount || !selectedShowtime || !selectedTheater}
@@ -312,6 +337,8 @@ function BookMovie() {
       >
         Pay ₹{totalPrice} & Book Now
       </button>
+
+      {/* Feedback */}
       {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
       {success && <p className="text-green-600 mt-2 text-center">{success}</p>}
     </div>

@@ -27,15 +27,24 @@ export const createMovie = async (req, res) => {
       return res.status(400).json({ error: 'Theaters must be an array' });
     }
 
-    theaters.forEach(t => {
-      t.showtimes = t.showtimes?.map(s => new Date(s));
-    });
+    const formattedTheaters = theaters.map(t => {
+  if (typeof t === 'string') {
+    return { _id: t, showtimes: [] };
+  }
+  return {
+    _id: t._id,
+    showtimes: Array.isArray(t.showtimes)
+      ? t.showtimes.map(s => new Date(s))
+      : []
+  };
+});
 
     const movie = new Movie({
-      title, description, genre, rating, duration,
-      posterUrl, trailerUrl, releaseDate, language,
-      cast, theaters
-    });
+  title, description, genre, rating, duration,
+  posterUrl, trailerUrl, releaseDate, language,
+  cast,
+  theaters: formattedTheaters
+});
 
     await movie.save();
     log.info(`🎬 Movie created: ${title}`);

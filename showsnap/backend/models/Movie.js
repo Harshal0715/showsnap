@@ -99,7 +99,10 @@ const movieSchema = new mongoose.Schema(
     language: {
       type: String,
       required: [true, 'Language is required'],
-      trim: true
+      trim: true,
+      // ✅ Comprehensive enum list matching frontend `supportedLanguages`
+      enum: ['en', 'hi', 'ta', 'te', 'ml', 'mr', 'kn', 'bn', 'gu', 'pa', 'ur'],
+      message: 'Language code "{VALUE}" is not supported.'
     },
     tags: {
       type: [String],
@@ -109,19 +112,20 @@ const movieSchema = new mongoose.Schema(
       type: Boolean,
       default: false
     },
+    status: {
+      type: String,
+      enum: ['Now Showing', 'Coming Soon'],
+      default: 'Now Showing'
+    },
     cast: {
       type: [castSchema],
       default: []
     },
-
-    // ✅ Referenced theaters (for admin control)
     theaters: [{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Theater'
     }],
-
-    // ✅ Embedded theaters (for frontend rendering)
-    embeddedTheaters: {
+    embeddedTheaters: { // This field holds the actual theater data copied at creation
       type: [embeddedTheaterSchema],
       default: []
     }
@@ -132,11 +136,12 @@ const movieSchema = new mongoose.Schema(
   }
 );
 
-// 🔍 Indexes for performance and text search
+// 🔍 Indexes for performance and multilingual search
 movieSchema.index({ genre: 1 });
 movieSchema.index({ language: 1 });
 movieSchema.index({ releaseDate: -1 });
 movieSchema.index({ isFeatured: 1 });
+movieSchema.index({ status: 1 });
 movieSchema.index({ title: 'text', description: 'text', genre: 'text', tags: 'text' });
 
 // 🧼 Normalize title before saving

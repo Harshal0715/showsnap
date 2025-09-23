@@ -8,19 +8,28 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchMovie = async () => {
-      try {
-        const res = await axios.get(`http://localhost:5000/api/movies/${id}`);
-        setMovie(res.data);
-      } catch (err) {
-        console.error('❌ Error fetching movie:', err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchMovie();
-  }, [id]);
+ useEffect(() => {
+  const fetchMovie = async () => {
+    try {
+      const res = await axios.get(`http://localhost:5000/api/movies/${id}`);
+      const movieData = res.data;
+
+      // ✅ Normalize theaters: use embedded if available
+      const normalizedTheaters = Array.isArray(movieData.theaters) && typeof movieData.theaters[0] === 'object'
+        ? movieData.theaters
+        : Array.isArray(movieData.embeddedTheaters)
+          ? movieData.embeddedTheaters
+          : [];
+
+      setMovie({ ...movieData, theaters: normalizedTheaters });
+    } catch (err) {
+      console.error('❌ Error fetching movie:', err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchMovie();
+}, [id]);
 
   const formatShowtime = (time) => {
     const date = new Date(time);
@@ -85,7 +94,7 @@ function MovieDetails() {
       </div>
 
       {/* 🏢 Theaters & Showtimes */}
-      {movie.theaters?.length > 0 && (
+      {movie.theaters?.length > 0 ? (
         <div className="mb-10">
           <h2 className="text-2xl font-semibold mb-4 text-red-400">Available Theaters & Showtimes</h2>
           <div className="space-y-4">
@@ -101,14 +110,16 @@ function MovieDetails() {
 
                 <div className="flex flex-wrap gap-3 mt-2 overflow-x-auto">
                   {Array.isArray(theater.showtimes) && theater.showtimes.length > 0 ? (
-                    theater.showtimes.map((time, idx) => (
-                      <div
-                        key={idx}
-                        className="px-3 py-1 bg-gray-700 text-sm rounded text-white hover:bg-gray-600 min-w-max whitespace-nowrap"
-                      >
-                        {formatShowtime(time)}
-                      </div>
-                    ))
+                    theater.showtimes
+                      .sort((a, b) => new Date(a.startTime || a) - new Date(b.startTime || b))
+                      .map((st, idx) => (
+                        <div
+                          key={idx}
+                          className="px-3 py-1 bg-gray-700 text-sm rounded text-white hover:bg-gray-600 min-w-max whitespace-nowrap"
+                        >
+                          {formatShowtime(st.startTime || st)}
+                        </div>
+                      ))
                   ) : (
                     <p className="text-gray-400 text-sm">No showtimes available.</p>
                   )}
@@ -124,6 +135,8 @@ function MovieDetails() {
             ))}
           </div>
         </div>
+      ) : (
+        <div className="mb-10 text-center text-gray-400">No theaters currently showing this movie.</div>
       )}
 
       {/* 🎭 Cast */}
