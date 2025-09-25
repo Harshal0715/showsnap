@@ -11,8 +11,7 @@ function MovieDetails() {
  useEffect(() => {
   const fetchMovie = async () => {
     try {
-      const res = await axios.get(`https://showsnap-backend-69my.onrender.com
-/api/movies/${id}`);
+      const res = await axios.get(`https://showsnap-backend-69my.onrender.com/api/movies/${id}`);
       const movieData = res.data;
 
       // ✅ Normalize theaters: use embedded if available
