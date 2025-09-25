@@ -27,31 +27,65 @@ export const createMovie = async (req, res) => {
       return res.status(400).json({ error: 'Theaters must be an array' });
     }
 
+    const seatRows = ['A', 'B', 'C', 'D'];
+    const seatCols = [1, 2, 3, 4, 5, 6];
+    const allSeats = seatRows.flatMap(row => seatCols.map(col => `${row}${col}`));
+
+    const generateBlockedSeats = () => {
+      const total = Math.floor(Math.random() * 10);
+      const shuffled = [...allSeats].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, total);
+    };
+
     const formattedTheaters = theaters.map(t => {
-  if (typeof t === 'string') {
-    return { _id: t, showtimes: [] };
-  }
-  return {
-    _id: t._id,
-    showtimes: Array.isArray(t.showtimes)
-      ? t.showtimes.map(s => new Date(s))
-      : []
-  };
-});
+      // Case 1: frontend sent just an ObjectId string
+      if (typeof t === 'string') {
+        return { _id: t, showtimes: [] };
+      }
+
+      // Case 2: frontend sent {_id, showtimes}
+      if (t._id) {
+        return {
+          _id: t._id,
+          showtimes: Array.isArray(t.showtimes)
+            ? t.showtimes.map(s => ({
+                startTime: new Date(s.startTime),
+                screen: s.screen || 'Screen 1',
+                availableSeats: typeof s.availableSeats === 'number' ? s.availableSeats : 100,
+                blockedSeats: generateBlockedSeats()
+              }))
+            : []
+        };
+      }
+
+      // Case 3: fallback for full theater object
+      return {
+        name: t.name || '',
+        location: t.location || '',
+        showtimes: Array.isArray(t.showtimes)
+          ? t.showtimes.map(s => ({
+              startTime: new Date(s.startTime),
+              screen: s.screen || 'Screen 1',
+              availableSeats: typeof s.availableSeats === 'number' ? s.availableSeats : 100,
+              blockedSeats: generateBlockedSeats()
+            }))
+          : []
+      };
+    });
 
     const movie = new Movie({
-  title, description, genre, rating, duration,
-  posterUrl, trailerUrl, releaseDate, language,
-  cast,
-  theaters: formattedTheaters
-});
+      title, description, genre, rating, duration,
+      posterUrl, trailerUrl, releaseDate, language,
+      cast,
+      theaters: formattedTheaters
+    });
 
     await movie.save();
     log.info(`🎬 Movie created: ${title}`);
     res.status(201).json({ message: '✅ Movie created', movie });
   } catch (err) {
     log.error(`❌ Movie creation failed: ${err.message}`);
-    res.status(500).json({ error: 'Server error while creating movie' });
+    res.status(500).json({ error: err.message || 'Server error while creating movie' });
   }
 };
 
@@ -189,7 +223,11 @@ export const getMovieById = async (req, res) => {
   try {
     const { id } = req.params;
     const movie = await Movie.findById(id);
-    if (!movie) return res.status(404).json({ error: 'Movie not found' });
+
+    if (!movie) {
+      return res.status(404).json({ error: 'Movie not found' });
+    }
+
     res.json(movie);
   } catch (err) {
     log.error(`❌ Failed to fetch movie: ${err.message}`);
@@ -197,7 +235,6 @@ export const getMovieById = async (req, res) => {
   }
 };
 
-// 📚 Get all movies
 export const getAllMovies = async (req, res) => {
   try {
     const movies = await Movie.find().sort({ releaseDate: -1 });
@@ -208,10 +245,11 @@ export const getAllMovies = async (req, res) => {
   }
 };
 
-// 🛠 Ping admin (optional health check)
 export const pingAdmin = (req, res) => {
   if (req.user.role !== 'admin') {
     return res.status(403).json({ error: 'Access denied' });
   }
   res.json({ message: 'Admin access verified' });
 };
+
+

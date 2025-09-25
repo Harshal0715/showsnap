@@ -13,25 +13,30 @@ export const searchTmdbMovie = async (req, res) => {
     if (!apiKey) return res.status(500).json({ error: 'TMDB API key not configured' });
 
     let results = [];
+    let matchedLang = '';
+
     for (const lang of supportedLanguages) {
       try {
         const tmdbRes = await axios.get('https://api.themoviedb.org/3/search/movie', {
           params: { api_key: apiKey, query, language: lang },
           timeout: 10000
         });
+
         if (tmdbRes.status === 200 && tmdbRes.data.results?.length > 0) {
           results = tmdbRes.data.results;
+          matchedLang = lang;
           break;
         }
       } catch (langErr) {
-        console.warn(`TMDB search failed for language ${lang}:`, langErr.response?.data || langErr.message);
-        continue;
+        console.warn(`TMDB search failed for ${lang}:`, langErr.response?.data || langErr.message);
       }
     }
 
     if (!results.length) {
       return res.status(404).json({ error: 'Movie not found in TMDB' });
     }
+
+    console.log(`✅ TMDB match found in language: ${matchedLang}`);
     res.status(200).json({ results });
   } catch (err) {
     console.error('❌ TMDB search error:', err.response?.data || err.message);
@@ -62,11 +67,12 @@ export const getTmdbMovieDetails = async (req, res) => {
 
     const details = detailsRes.data;
 
-    // build genres and cast
+    // 🎭 Genres
     const genres = Array.isArray(details.genres)
       ? details.genres.map(g => g.name).filter(Boolean)
       : [];
 
+    // 🎭 Cast
     const cast = Array.isArray(creditsRes?.data?.cast)
       ? creditsRes.data.cast.slice(0, 10).map(c => ({
           name: c.name || '',
@@ -75,10 +81,20 @@ export const getTmdbMovieDetails = async (req, res) => {
         }))
       : [];
 
-    // 🔥 find YouTube trailer
+    // 🔥 Trailer extraction with fallback
     const videos = videosRes?.data?.results || [];
-    const trailer = videos.find(v => v.type === 'Trailer' && v.site === 'YouTube');
-    const trailerUrl = trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : '';
+    const trailer =
+      videos.find(v => v.type === 'Trailer' && v.site === 'YouTube' && v.official) ||
+      videos.find(v => v.type === 'Trailer' && v.site === 'YouTube') ||
+      videos.find(v => ['Teaser', 'Clip'].includes(v.type) && v.site === 'YouTube');
+    const trailerUrl = trailer?.key
+      ? `https://www.youtube.com/watch?v=${trailer.key}`
+      : '';
+
+    // 🧼 Release date validation
+    const releaseDate = /^\d{4}-\d{2}-\d{2}$/.test(details.release_date)
+      ? details.release_date
+      : '';
 
     res.status(200).json({
       title: details.title || '',
@@ -88,7 +104,7 @@ export const getTmdbMovieDetails = async (req, res) => {
       duration: `${details.runtime || 0} min`,
       posterUrl: details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '',
       trailerUrl,
-      releaseDate: details.release_date || '',
+      releaseDate,
       language: supportedLanguages.includes(details.original_language)
         ? details.original_language
         : 'en',

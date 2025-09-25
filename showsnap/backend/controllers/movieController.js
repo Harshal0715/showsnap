@@ -1,5 +1,6 @@
+import mongoose from 'mongoose';
 import Movie from '../models/Movie.js';
-import Theater from '../models/Theater.js'; // Used indirectly in createMovie
+import Theater from '../models/Theater.js';
 import logger from '../utils/logger.js';
 
 /**
@@ -19,11 +20,11 @@ export const getMovies = async (req, res) => {
       limit = 20,
     } = req.query;
 
+    const location = req.query.location?.trim();
     const query = {};
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    // Combine releaseDate filters safely
     if (isUpcoming === 'true') {
       query.releaseDate = { ...(query.releaseDate || {}), $gt: today };
     }
@@ -32,6 +33,13 @@ export const getMovies = async (req, res) => {
     }
     if (releasedAfter && !isNaN(Date.parse(releasedAfter))) {
       query.releaseDate = { ...(query.releaseDate || {}), $gte: new Date(releasedAfter) };
+    }
+
+    if (req.query.location) {
+  query['embeddedTheaters.location'] = {
+    $regex: req.query.location.trim(),
+    $options: 'i'
+  };
     }
 
     if (genre?.trim()) {
@@ -77,36 +85,36 @@ export const getMovies = async (req, res) => {
 
 /**
  * GET /api/movies/:id
- * Fetch a single movie by ID with populated theater data
+ * Fetch a single movie by ID with embedded theater data
  */
 export const getMovieById = async (req, res) => {
-  try {
-    const { id } = req.params;
+  const { id } = req.params;
 
-    if (!id || !id.trim()) {
-      return res.status(400).json({ error: 'Missing or invalid movie ID' });
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: 'Invalid movie ID' });
+  }
+
+  try {
+    const movie = await Movie.findById(id).lean();
+    if (!movie) {
+      return res.status(404).json({ error: 'Movie not found' });
     }
 
-    const movie = await Movie.findById(id).lean();
-
-    if (!movie) return res.status(404).json({ error: 'Movie not found' });
-
-    // ✅ Use embeddedTheaters if present
     const embedded = Array.isArray(movie.embeddedTheaters) ? movie.embeddedTheaters : [];
 
-    // Normalize showtimes
     embedded.forEach((t) => {
       if (Array.isArray(t.showtimes)) {
-        t.showtimes = t.showtimes.map((s) => new Date(s).toISOString());
+        t.showtimes = t.showtimes.map((s) => ({
+          ...s,
+          startTime: new Date(s.startTime).toISOString()
+        }));
       }
     });
 
-    // Normalize releaseDate
     movie.releaseDate = movie.releaseDate
       ? new Date(movie.releaseDate).toISOString()
       : null;
 
-    // ✅ Send embedded theaters as 'theaters' for frontend compatibility
     res.status(200).json({
       ...movie,
       theaters: embedded
