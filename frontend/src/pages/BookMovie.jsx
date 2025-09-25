@@ -60,7 +60,8 @@ function BookMovie() {
       setError('');
 
       try {
-        const movieRes = await axios.get(`http://localhost:5000/api/movies/${id}`);
+        const movieRes = await axios.get(`https://showsnap-backend-69my.onrender.com
+/api/movies/${id}`);
         const movieData = movieRes.data;
 
         const normalizedTheaters = Array.isArray(movieData.theaters) && typeof movieData.theaters[0] === 'object'
@@ -88,7 +89,8 @@ function BookMovie() {
       if (!selectedShowtimeObj || !selectedTheater || !movie) return;
 
       try {
-        const res = await axios.get('http://localhost:5000/api/bookings/booked-seats', {
+        const res = await axios.get('https://showsnap-backend-69my.onrender.com
+/api/bookings/booked-seats', {
           params: {
             movieId: movie._id,
             theater: selectedTheater.name,
